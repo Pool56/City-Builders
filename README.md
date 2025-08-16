@@ -124,7 +124,7 @@ Produces 3D before/after renderings for community validation
 
 ### Solution demo video
 ### 
-[![Watch the video](https://youtu.be/5fjDoKyZgPg)
+[![Watch the video](https://youtu.be/h2du_uAamZo)
 
 ### Project development roadmap
 Phase 1 - Data collection and preparation lasting for one to three months
