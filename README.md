@@ -126,6 +126,7 @@ Produces 3D before/after renderings for community validation
 ### 
 [![Watch the video](https://youtu.be/h2du_uAamZo)
 
+
 ### Project development roadmap
 Phase 1 - Data collection and preparation lasting for one to three months
 
@@ -269,7 +270,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ### Authors
 
 
-- ** John Maina** - _Initial work_ - [PurpleBooth](https://)
+- ** John Maina** - _Initial work_ - 
 
 ### License
 
