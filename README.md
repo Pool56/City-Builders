@@ -13,6 +13,7 @@
 - [Additional details](#additional-details)
   - [How to run the project](#how-to-run-the-project)
   - [Live demo](#live-demo)
+  - [Judging criteria](#judgingcriteria)
 - [About this template](#about-this-template)
   - [Contributing](#contributing)
   - [Versioning](#versioning)
@@ -178,7 +179,76 @@ To tun the project a user requires an AutoCAD software, IBM Cognos analytics and
 ### Live demo
 
 
-You can find a running system to test at...
+### Judging criteria
+
+Completeness and feasibility
+
+Feasibility:
+The solution integrates three proven IBM and industry technologies — Watsonx.ai, AutoCAD, and IBM Cognos Analytics — all of which are already commercially available and interoperable via APIs or data exports.
+
+Watsonx.ai: Feasible for urban planning prediction models due to existing AI capabilities in geospatial analysis and generative design.
+
+AutoCAD: Industry-standard for translating AI-generated layouts into construction-ready blueprints.
+
+IBM Cognos Analytics: Feasible for real-time KPI tracking and public transparency.
+
+Planning:
+The workflow from data collection → AI modeling → engineering design → progress monitoring → public engagement is fully mapped and addresses technical, social, and governance aspects.
+
+Proof-of-concept readiness:
+Clear roles for each technology and tangible deliverables (dashboards, 3D designs, risk maps). The application of IBM technology is explicit and central to the process.
+
+
+
+
+Creativity and Innovation
+
+Unique application of AI:
+Using Watsonx.ai for predictive settlement growth modeling, AI-optimized concrete mix design, and generative urban layout planning is a novel integration that goes beyond standard slum redevelopment approaches.
+
+Differentiation:
+Most current urban renewal projects are manual, top-down engineering exercises; this solution adds a data-driven, AI-guided, community-inclusive layer.
+
+Market positioning:
+Combines civil engineering software (AutoCAD) with IBM’s AI + analytics ecosystem in a single, scalable redevelopment pipeline — not commonly found in existing municipal housing programs.
+
+
+Design and Usability
+Design Strengths:
+
+The Watsonx.ai interface can be pre-trained to allow municipal staff to run “what-if” scenarios without deep AI expertise.
+
+AutoCAD’s parametric models can adapt quickly to changes in funding, land, or population density.
+
+Cognos dashboards have user-friendly drill-downs for NGOs, donors, and the public.
+
+Ease of Adoption:
+Local government engineers and planners can integrate into their existing CAD and reporting workflows.
+
+Minor Considerations:
+Some slum areas may have incomplete or outdated data, requiring a baseline data collection phase before AI processing — slightly slowing immediate deployment in the first project.
+
+
+
+Effectiveness and Efficiency 
+
+Relevance:
+Directly addresses UN SDG 11 priorities: safe housing, sustainable urbanization, and resilience.
+
+Effectiveness:
+
+Predictive modeling prevents misallocation of resources and ensures phased redevelopment without mass displacement.
+
+Cognos monitoring reduces corruption and keeps stakeholders accountable.
+
+AutoCAD designs ensure compliance with safety and environmental regulations.
+
+Efficiency:
+AI-driven planning cuts down manual planning cycles from months to weeks.
+
+Scalability:
+The same pipeline can be adapted for other cities, disaster-recovery housing, or rural-to-urban transition planning.
+
 
 See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
