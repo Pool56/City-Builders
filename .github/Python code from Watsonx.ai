@@ -1,0 +1,111 @@
+import requests
+
+url = "https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29"
+
+body = {
+	"input": """Affordable and durable housing recommendations
+
+Input: Satellite imagery coverage is 12 km² informal settlement area.
+
+Population census is 85,000 residents, average density of 7,100 people/km².
+
+Growth rate is 3.8% annually (urban in-migration).
+Output: Based on this slum Boundary and density analysis the GIS blueprint identifies 9 redevelopment zones, each capable of accommodating 9,500–10,000 people in concrete housing.
+
+Optimized land allocation reduces overcrowding by 25% compared to current settlement patterns.
+
+Input: Historical migration is 1,200 residents/month net inflow.
+
+Average household size is 4.2 people/household → 285 new housing units/month needed.
+
+Material demand forecast is:
+
+Concrete: ~3,500 tons/month
+
+Steel reinforcement: ~750 tons/month
+Output: Based on this migration and material forecasting, risk heatmap flags 2 flood-prone zones covering 1.5 km² where construction must be adapted.
+
+Predictive model identifies 15% spike in material demand during rainy season due to higher in-migration.
+
+Input: Available land for redevelopment is  8.5 km².
+
+Budget cap is  $120 million for first construction phase.
+
+Community survey is 72% residents prefer minimal relocation.
+Output: Based on this optimized layout planning, AutoCAD site plan accommodates 20,500 concrete housing units.
+
+Displacement reduced by 40% compared to conventional grid layouts.
+
+Infrastructure integration will be  32 km of new road network, 18 green spaces, and 5 drainage corridors included.
+
+Input: Scenario 1 is Low-rise apartments (capacity: 6 floors, 30 units each) → 18,000 units possible.
+
+Scenario 2 is Modular housing (capacity: 3 floors, 12 units each) → 22,000 units possible.
+
+Community survey is 68% favor modular housing for flexibility.
+Output:""",
+	"parameters": {
+		"decoding_method": "greedy",
+		"max_new_tokens": 200,
+		"min_new_tokens": 0,
+		"repetition_penalty": 1
+	},
+	"model_id": "ibm/granite-3-2-8b-instruct",
+	"project_id": "0db0c576-4769-4a77-8156-accddad87717",
+	"moderations": {
+		"hap": {
+			"input": {
+				"enabled": True,
+				"threshold": 0.5,
+				"mask": {
+					"remove_entity_value": True
+				}
+			},
+			"output": {
+				"enabled": True,
+				"threshold": 0.5,
+				"mask": {
+					"remove_entity_value": True
+				}
+			}
+		},
+		"pii": {
+			"input": {
+				"enabled": True,
+				"threshold": 0.5,
+				"mask": {
+					"remove_entity_value": True
+				}
+			},
+			"output": {
+				"enabled": True,
+				"threshold": 0.5,
+				"mask": {
+					"remove_entity_value": True
+				}
+			}
+		},
+		"granite_guardian": {
+			"input": {
+				"threshold": 1
+			}
+		}
+	}
+}
+
+headers = {
+	"Accept": "application/json",
+	"Content-Type": "application/json",
+	"Authorization": "Bearer YOUR_ACCESS_TOKEN"
+}
+
+response = requests.post(
+	url,
+	headers=headers,
+	json=body
+)
+
+if response.status_code != 200:
+	raise Exception("Non-200 response: " + str(response.text))
+
+data = response.json()
